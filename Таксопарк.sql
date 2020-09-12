@@ -13,7 +13,7 @@
 
 CREATE TABLE Должности
 (
-  Код_должности VARCHAR NOT NULL,
+  Код_должности INT NOT NULL,
   Наименование_должности VARCHAR NOT NULL,
   Оклад INT NOT NULL,
   Обязанности VARCHAR NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE Вызовы
   Код_тарифа INT NOT NULL,
   Код_услуги INT NOT NULL,
   Код_автомобиля INT NOT NULL,
-  Код_сотрудника-оператора INT NOT NULL,
+  Код_сотрудника_оператора INT NOT NULL,
   Код_вызова INT NOT NULL,
   PRIMARY KEY (Код_вызова)
 );
@@ -49,7 +49,7 @@ CREATE TABLE Марки
 (
   Код_марки INT NOT NULL,
   Наименование VARCHAR NOT NULL,
-  Тех._характеристики VARCHAR NOT NULL,
+  Технические_характеристики VARCHAR NOT NULL,
   Стоимость INT NOT NULL,
   Специфика VARCHAR NOT NULL,
   PRIMARY KEY (Код_марки)
@@ -73,9 +73,9 @@ CREATE TABLE Автомобили
   Номер_двигателя INT NOT NULL,
   Пробег INT NOT NULL,
   Год_выпуска DATE NOT NULL,
-  Код_сотрудника-шофёра INT NOT NULL,
+  Код_сотрудника_шофёра INT NOT NULL,
   Дата_последнего_ТО INT NOT NULL,
-  Код_сотрудника-механика INT NOT NULL,
+  Код_сотрудника_механика INT NOT NULL,
   Специальные_отметки VARCHAR NOT NULL,
   PRIMARY KEY (Код_автомобиля)
 );
