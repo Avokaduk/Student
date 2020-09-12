@@ -1,79 +1,79 @@
-CREATE TABLE Сотрудники
+п»їCREATE TABLE РЎРѕС‚СЂСѓРґРЅРёРєРё
 (
-  Код_сотрудника INT NOT NULL,
-  ФИО VARCHAR NOT NULL,
-  Возраст INT NOT NULL,
-  Пол VARCHAR NOT NULL,
-  Адрес VARCHAR NOT NULL,
-  Телефон INT NOT NULL,
-  Паспортные_данные VARCHAR NOT NULL,
-  Код_должности INT NOT NULL,
-  PRIMARY KEY (Код_сотрудника)
+  РљРѕРґ_СЃРѕС‚СЂСѓРґРЅРёРєР° INT NOT NULL,
+  Р¤РРћ VARCHAR NOT NULL,
+  Р’РѕР·СЂР°СЃС‚ INT NOT NULL,
+  РџРѕР» VARCHAR NOT NULL,
+  РђРґСЂРµСЃ VARCHAR NOT NULL,
+  РўРµР»РµС„РѕРЅ INT NOT NULL,
+  РџР°СЃРїРѕСЂС‚РЅС‹Рµ_РґР°РЅРЅС‹Рµ VARCHAR NOT NULL,
+  РљРѕРґ_РґРѕР»Р¶РЅРѕСЃС‚Рё INT NOT NULL,
+  PRIMARY KEY (РљРѕРґ_СЃРѕС‚СЂСѓРґРЅРёРєР°)
 );
 
-CREATE TABLE Должности
+CREATE TABLE Р”РѕР»Р¶РЅРѕСЃС‚Рё
 (
-  Код_должности INT NOT NULL,
-  Наименование_должности VARCHAR NOT NULL,
-  Оклад INT NOT NULL,
-  Обязанности VARCHAR NOT NULL,
-  Требования VARCHAR NOT NULL,
-  PRIMARY KEY (Код_должности)
+  РљРѕРґ_РґРѕР»Р¶РЅРѕСЃС‚Рё INT NOT NULL,
+  РќР°РёРјРµРЅРѕРІР°РЅРёРµ_РґРѕР»Р¶РЅРѕСЃС‚Рё VARCHAR NOT NULL,
+  РћРєР»Р°Рґ INT NOT NULL,
+  РћР±СЏР·Р°РЅРЅРѕСЃС‚Рё VARCHAR NOT NULL,
+  РўСЂРµР±РѕРІР°РЅРёСЏ VARCHAR NOT NULL,
+  PRIMARY KEY (РљРѕРґ_РґРѕР»Р¶РЅРѕСЃС‚Рё)
 );
 
-CREATE TABLE Вызовы
+CREATE TABLE Р’С‹Р·РѕРІС‹
 (
-  Дата DATE NOT NULL,
-  Время DATE NOT NULL,
-  Телефон INT NOT NULL,
-  Откуда VARCHAR NOT NULL,
-  Куда VARCHAR NOT NULL,
-  Код_тарифа INT NOT NULL,
-  Код_услуги INT NOT NULL,
-  Код_автомобиля INT NOT NULL,
-  Код_сотрудника-оператора INT NOT NULL
+  Р”Р°С‚Р° DATE NOT NULL,
+  Р’СЂРµРјСЏ DATE NOT NULL,
+  РўРµР»РµС„РѕРЅ INT NOT NULL,
+  РћС‚РєСѓРґР° VARCHAR NOT NULL,
+  РљСѓРґР° VARCHAR NOT NULL,
+  РљРѕРґ_С‚Р°СЂРёС„Р° INT NOT NULL,
+  РљРѕРґ_СѓСЃР»СѓРіРё INT NOT NULL,
+  РљРѕРґ_Р°РІС‚РѕРјРѕР±РёР»СЏ INT NOT NULL,
+  РљРѕРґ_СЃРѕС‚СЂСѓРґРЅРёРєР°-РѕРїРµСЂР°С‚РѕСЂР° INT NOT NULL
 );
 
-CREATE TABLE Доп._услуги
+CREATE TABLE Р”РѕРї._СѓСЃР»СѓРіРё
 (
-  Код_услуги INT NOT NULL,
-  Наименование VARCHAR NOT NULL,
-  Описание_услуги VARCHAR NOT NULL,
-  Стоимость INT NOT NULL,
-  PRIMARY KEY (Код_услуги)
+  РљРѕРґ_СѓСЃР»СѓРіРё INT NOT NULL,
+  РќР°РёРјРµРЅРѕРІР°РЅРёРµ VARCHAR NOT NULL,
+  РћРїРёСЃР°РЅРёРµ_СѓСЃР»СѓРіРё VARCHAR NOT NULL,
+  РЎС‚РѕРёРјРѕСЃС‚СЊ INT NOT NULL,
+  PRIMARY KEY (РљРѕРґ_СѓСЃР»СѓРіРё)
 );
 
-CREATE TABLE Марки
+CREATE TABLE РњР°СЂРєРё
 (
-  Код_марки INT NOT NULL,
-  Наименование VARCHAR NOT NULL,
-  Тех._характеристики VARCHAR NOT NULL,
-  Стоимость INT NOT NULL,
-  Специфика VARCHAR NOT NULL,
-  PRIMARY KEY (Код_марки)
+  РљРѕРґ_РјР°СЂРєРё INT NOT NULL,
+  РќР°РёРјРµРЅРѕРІР°РЅРёРµ VARCHAR NOT NULL,
+  РўРµС…._С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё VARCHAR NOT NULL,
+  РЎС‚РѕРёРјРѕСЃС‚СЊ INT NOT NULL,
+  РЎРїРµС†РёС„РёРєР° VARCHAR NOT NULL,
+  PRIMARY KEY (РљРѕРґ_РјР°СЂРєРё)
 );
 
-CREATE TABLE Тарифы
+CREATE TABLE РўР°СЂРёС„С‹
 (
-  Код_тарифа INT NOT NULL,
-  Наименование VARCHAR NOT NULL,
-  Описание VARCHAR NOT NULL,
-  Стоимость INT NOT NULL,
-  PRIMARY KEY (Код_тарифа)
+  РљРѕРґ_С‚Р°СЂРёС„Р° INT NOT NULL,
+  РќР°РёРјРµРЅРѕРІР°РЅРёРµ VARCHAR NOT NULL,
+  РћРїРёСЃР°РЅРёРµ VARCHAR NOT NULL,
+  РЎС‚РѕРёРјРѕСЃС‚СЊ INT NOT NULL,
+  PRIMARY KEY (РљРѕРґ_С‚Р°СЂРёС„Р°)
 );
 
-CREATE TABLE Автомобили
+CREATE TABLE РђРІС‚РѕРјРѕР±РёР»Рё
 (
-  Код_автомобиля INT NOT NULL,
-  Код_марки INT NOT NULL,
-  Регистрационный_номер INT NOT NULL,
-  Номер_кузова INT NOT NULL,
-  Номер_двигателя INT NOT NULL,
-  Пробег INT NOT NULL,
-  Год_выпуска DATE NOT NULL,
-  Код_сотрудника-шофёра INT NOT NULL,
-  Дата_последнего_ТО DATE NOT NULL,
-  Код_сотрудника-механика INT NOT NULL,
-  Специальные_отметки VARCHAR NOT NULL,
-  PRIMARY KEY (Код_автомобиля)
+  РљРѕРґ_Р°РІС‚РѕРјРѕР±РёР»СЏ INT NOT NULL,
+  РљРѕРґ_РјР°СЂРєРё INT NOT NULL,
+  Р РµРіРёСЃС‚СЂР°С†РёРѕРЅРЅС‹Р№_РЅРѕРјРµСЂ INT NOT NULL,
+  РќРѕРјРµСЂ_РєСѓР·РѕРІР° INT NOT NULL,
+  РќРѕРјРµСЂ_РґРІРёРіР°С‚РµР»СЏ INT NOT NULL,
+  РџСЂРѕР±РµРі INT NOT NULL,
+  Р“РѕРґ_РІС‹РїСѓСЃРєР° DATE NOT NULL,
+  РљРѕРґ_СЃРѕС‚СЂСѓРґРЅРёРєР°-С€РѕС„С‘СЂР° INT NOT NULL,
+  Р”Р°С‚Р°_РїРѕСЃР»РµРґРЅРµРіРѕ_РўРћ DATE NOT NULL,
+  РљРѕРґ_СЃРѕС‚СЂСѓРґРЅРёРєР°-РјРµС…Р°РЅРёРєР° INT NOT NULL,
+  РЎРїРµС†РёР°Р»СЊРЅС‹Рµ_РѕС‚РјРµС‚РєРё VARCHAR NOT NULL,
+  PRIMARY KEY (РљРѕРґ_Р°РІС‚РѕРјРѕР±РёР»СЏ)
 );
